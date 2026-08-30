@@ -1,0 +1,655 @@
+<sdf version="1.7">
+  <model name="mobile_arm_robot">
+    <link name="base_link">
+      <inertial>
+        <pose>0.014618 0.005486 0.023313 0 -0 0</pose>
+        <mass>2.66836</mass>
+        <inertia>
+          <ixx>0.0420107</ixx>
+          <ixy>-0.000458565</ixy>
+          <ixz>-0.00621837</ixz>
+          <iyy>0.0433674</iyy>
+          <iyz>-0.00205126</iyz>
+          <izz>0.0107035</izz>
+        </inertia>
+      </inertial>
+      <collision name="base_link_collision">
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file:///home/kamel/ros2_ws3_1/src/mobile_arm_robot_description/meshes/base_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name="base_link_fixed_joint_lump__arm_base_link_collision_1">
+        <pose>0.050712 0.014708 0.002 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file:///home/kamel/ros2_ws3_1/src/mobile_arm_robot_description/meshes/arm_base_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name="base_link_fixed_joint_lump__arm_link_1_collision_2">
+        <pose>0.050712 0.014708 0.091 0 -0 3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file:///home/kamel/ros2_ws3_1/src/mobile_arm_robot_description/meshes/arm_link_1.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name="base_link_fixed_joint_lump__arm_link_2_collision_3">
+        <pose>0.050712 0.050458 0.127193 0 -0 3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file:///home/kamel/ros2_ws3_1/src/mobile_arm_robot_description/meshes/arm_link_2.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name="base_link_fixed_joint_lump__arm_link_3_collision_4">
+        <pose>0.050712 0.050458 0.206517 0 -0 3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file:///home/kamel/ros2_ws3_1/src/mobile_arm_robot_description/meshes/arm_link_3.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name="base_link_fixed_joint_lump__arm_link_4_collision_5">
+        <pose>0.050712 0.014808 0.332717 0 -0 3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file:///home/kamel/ros2_ws3_1/src/mobile_arm_robot_description/meshes/arm_link_4.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name="base_link_fixed_joint_lump__arm_camera_link_collision_6">
+        <pose>0.097212 0.014808 0.375217 0 0 -0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file:///home/kamel/ros2_ws3_1/src/mobile_arm_robot_description/meshes/arm_camera_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name="base_link_fixed_joint_lump__left_gripper_link_collision_7">
+        <pose>0.051212 0.039808 0.407717 0 -0 3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file:///home/kamel/ros2_ws3_1/src/mobile_arm_robot_description/meshes/left_gripper_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name="base_link_fixed_joint_lump__right_gripper_link_collision_8">
+        <pose>0.051212 -0.010192 0.407717 0 -0 3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file:///home/kamel/ros2_ws3_1/src/mobile_arm_robot_description/meshes/right_gripper_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name="base_link_fixed_joint_lump__lidar_link_collision_9">
+        <pose>-0.090862 0.001797 0.04 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file:///home/kamel/ros2_ws3_1/src/mobile_arm_robot_description/meshes/lidar_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name="base_link_fixed_joint_lump__robot_camera_link_collision_10">
+        <pose>-0.133238 0.001833 -0.016013 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file:///home/kamel/ros2_ws3_1/src/mobile_arm_robot_description/meshes/robot_camera_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="base_link_visual">
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file:///home/kamel/ros2_ws3_1/src/mobile_arm_robot_description/meshes/base_link.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.6 0.6 0.6 1</ambient>
+          <diffuse>0.6 0.6 0.6 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+      <visual name="base_link_fixed_joint_lump__arm_base_link_visual_1">
+        <pose>0.050712 0.014708 0.002 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file:///home/kamel/ros2_ws3_1/src/mobile_arm_robot_description/meshes/arm_base_link.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.502 0.502 0.502 1</ambient>
+          <diffuse>0.502 0.502 0.502 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+      <visual name="base_link_fixed_joint_lump__arm_link_1_visual_2">
+        <pose>0.050712 0.014708 0.091 0 -0 3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file:///home/kamel/ros2_ws3_1/src/mobile_arm_robot_description/meshes/arm_link_1.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.502 0.502 0.502 1</ambient>
+          <diffuse>0.502 0.502 0.502 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+      <visual name="base_link_fixed_joint_lump__arm_link_2_visual_3">
+        <pose>0.050712 0.050458 0.127193 0 -0 3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file:///home/kamel/ros2_ws3_1/src/mobile_arm_robot_description/meshes/arm_link_2.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.502 0.502 0.502 1</ambient>
+          <diffuse>0.502 0.502 0.502 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+      <visual name="base_link_fixed_joint_lump__arm_link_3_visual_4">
+        <pose>0.050712 0.050458 0.206517 0 -0 3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file:///home/kamel/ros2_ws3_1/src/mobile_arm_robot_description/meshes/arm_link_3.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.502 0.502 0.502 1</ambient>
+          <diffuse>0.502 0.502 0.502 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+      <visual name="base_link_fixed_joint_lump__arm_link_4_visual_5">
+        <pose>0.050712 0.014808 0.332717 0 -0 3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file:///home/kamel/ros2_ws3_1/src/mobile_arm_robot_description/meshes/arm_link_4.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.502 0.502 0.502 1</ambient>
+          <diffuse>0.502 0.502 0.502 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+      <visual name="base_link_fixed_joint_lump__arm_camera_link_visual_6">
+        <pose>0.097212 0.014808 0.375217 0 0 -0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file:///home/kamel/ros2_ws3_1/src/mobile_arm_robot_description/meshes/arm_camera_link.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.231 0.231 0.231 1</ambient>
+          <diffuse>0.231 0.231 0.231 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+      <visual name="base_link_fixed_joint_lump__left_gripper_link_visual_7">
+        <pose>0.051212 0.039808 0.407717 0 -0 3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file:///home/kamel/ros2_ws3_1/src/mobile_arm_robot_description/meshes/left_gripper_link.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.502 0.502 0.502 1</ambient>
+          <diffuse>0.502 0.502 0.502 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+      <visual name="base_link_fixed_joint_lump__right_gripper_link_visual_8">
+        <pose>0.051212 -0.010192 0.407717 0 -0 3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file:///home/kamel/ros2_ws3_1/src/mobile_arm_robot_description/meshes/right_gripper_link.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.502 0.502 0.502 1</ambient>
+          <diffuse>0.502 0.502 0.502 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+      <visual name="base_link_fixed_joint_lump__lidar_link_visual_9">
+        <pose>-0.090862 0.001797 0.04 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file:///home/kamel/ros2_ws3_1/src/mobile_arm_robot_description/meshes/lidar_link.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.231 0.231 0.231 1</ambient>
+          <diffuse>0.231 0.231 0.231 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+      <visual name="base_link_fixed_joint_lump__robot_camera_link_visual_10">
+        <pose>-0.133238 0.001833 -0.016013 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file:///home/kamel/ros2_ws3_1/src/mobile_arm_robot_description/meshes/robot_camera_link.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.231 0.231 0.231 1</ambient>
+          <diffuse>0.231 0.231 0.231 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+    
+      <!-- Small distance sensor mounted near the top of the fixed arm -->
+      <visual name="arm_front_distance_sensor_visual">
+        <pose>0.045 0.014808 0.372 0 0 3.14159</pose>
+
+        <geometry>
+          <box>
+            <size>0.014 0.008 0.006</size>
+          </box>
+        </geometry>
+
+        <material>
+          <ambient>0.05 0.05 0.05 1</ambient>
+          <diffuse>0.08 0.08 0.08 1</diffuse>
+          <specular>0.02 0.02 0.02 1</specular>
+        </material>
+      </visual>
+
+      <!-- Narrow ray sensor: behaves like a small ToF / proximity sensor -->
+      <sensor name="arm_front_distance_sensor" type="gpu_lidar">
+        <pose>0.045 0.014808 0.372 0 0 3.14159</pose>
+
+        <always_on>true</always_on>
+        <visualize>true</visualize>
+        <update_rate>15</update_rate>
+
+        <topic>/arm_front_lidar</topic>
+
+        <ray>
+          <scan>
+            <horizontal>
+              <samples>181</samples>
+              <resolution>1</resolution>
+
+              <!-- About 14 degrees total field of view -->
+              <min_angle>-1.5708</min_angle>
+              <max_angle>1.5708</max_angle>
+            </horizontal>
+          </scan>
+
+          <range>
+            <min>0.05</min>
+            <max>2.00</max>
+            <resolution>0.005</resolution>
+          </range>
+
+          <noise>
+            <type>gaussian</type>
+            <mean>0.0</mean>
+            <stddev>0.002</stddev>
+          </noise>
+        </ray>
+      </sensor>
+
+      <!-- Tiny lower front sensor, mounted under the robot camera -->
+            <!-- Small visible mount connecting the lower sensor to the robot body -->
+      
+
+<visual name="lower_front_distance_sensor_visual">
+        <!-- Same X/Y as robot camera, but lower -->
+        <pose>-0.133238 0.001833 -0.075 0 0 3.14159</pose>
+
+        <geometry>
+          <box>
+            <!-- 8 x 6 x 3 mm -->
+            <size>0.008 0.006 0.003</size>
+          </box>
+        </geometry>
+
+        <material>
+          <ambient>0.02 0.02 0.02 1</ambient>
+          <diffuse>0.03 0.03 0.03 1</diffuse>
+          <specular>0.01 0.01 0.01 1</specular>
+        </material>
+      </visual>
+
+      <!-- Low obstacle detector -->
+      <sensor name="lower_front_distance_sensor" type="gpu_lidar">
+        <!-- yaw=pi: look toward the real robot front, negative X -->
+        <pose>-0.133238 0.001833 -0.075 0 0 3.14159</pose>
+
+        <always_on>true</always_on>
+        <visualize>false</visualize>
+        <update_rate>20</update_rate>
+
+        <topic>/lower_front_lidar</topic>
+
+        <ray>
+          <scan>
+            <horizontal>
+              <samples>121</samples>
+              <resolution>1</resolution>
+
+              <!-- 120 degree field of view -->
+              <min_angle>-1.0472</min_angle>
+              <max_angle>1.0472</max_angle>
+            </horizontal>
+          </scan>
+
+          <range>
+            <min>0.04</min>
+            <max>1.50</max>
+            <resolution>0.005</resolution>
+          </range>
+
+          <noise>
+            <type>gaussian</type>
+            <mean>0.0</mean>
+            <stddev>0.002</stddev>
+          </noise>
+        </ray>
+      </sensor>
+
+      <sensor name="lidar_sensor" type="gpu_lidar">
+        <pose>-0.0908615203408174 0.00179684818200293 0.04 0 0 0</pose>
+        <always_on>true</always_on>
+        <visualize>false</visualize>
+        <update_rate>10</update_rate>
+        <topic>/lidar</topic>
+        <ray>
+          <scan>
+            <horizontal>
+              <samples>360</samples>
+              <resolution>1</resolution>
+              <min_angle>-3.14159</min_angle>
+              <max_angle>3.14159</max_angle>
+            </horizontal>
+          </scan>
+          <range>
+            <min>0.20</min>
+            <max>8.0</max>
+            <resolution>0.01</resolution>
+          </range>
+          <noise>
+            <type>gaussian</type>
+            <mean>0.0</mean>
+            <stddev>0.01</stddev>
+          </noise>
+        </ray>
+      </sensor>
+
+      <sensor name="robot_camera_sensor" type="camera">
+        <pose>-0.133237695032014 0.00183257540465381 -0.0160127626540696 0 0 3.14159</pose>
+        <always_on>true</always_on>
+        <visualize>false</visualize>
+        <update_rate>30</update_rate>
+        <topic>/robot_camera/image</topic>
+        <camera>
+          <horizontal_fov>1.047</horizontal_fov>
+          <image>
+            <width>640</width>
+            <height>480</height>
+            <format>R8G8B8</format>
+          </image>
+          <clip>
+            <near>0.05</near>
+            <far>20.0</far>
+          </clip>
+        </camera>
+      </sensor>
+
+
+</link>
+    <joint name="front_left_wheel_joint" type="revolute">
+      <pose relative_to="base_link">0.086714 0.15998 -0.1041 0 -0 0</pose>
+      <parent>base_link</parent>
+      <child>front_left_wheel_link</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name="front_left_wheel_link">
+      <pose relative_to="front_left_wheel_joint">0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 -0.007684 -6.1e-05 0 -0 0</pose>
+        <mass>0.0711334</mass>
+        <inertia>
+          <ixx>7.86302e-05</ixx>
+          <ixy>1.55295e-09</ixy>
+          <ixz>7.11242e-10</ixz>
+          <iyy>0.000137459</iyy>
+          <iyz>6.83774e-10</iyz>
+          <izz>7.84461e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name="front_left_wheel_link_collision">
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file:///home/kamel/ros2_ws3_1/src/mobile_arm_robot_description/meshes/front_left_wheel_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="front_left_wheel_link_visual">
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file:///home/kamel/ros2_ws3_1/src/mobile_arm_robot_description/meshes/front_left_wheel_link.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.231 0.231 0.231 1</ambient>
+          <diffuse>0.231 0.231 0.231 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+    </link>
+    <joint name="front_right_wheel_joint" type="revolute">
+      <pose relative_to="base_link">0.086714 -0.15822 -0.1061 0 -0 0</pose>
+      <parent>base_link</parent>
+      <child>front_right_wheel_link</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name="front_right_wheel_link">
+      <pose relative_to="front_right_wheel_joint">0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-0 0.007684 -6.1e-05 0 -0 0</pose>
+        <mass>0.0711334</mass>
+        <inertia>
+          <ixx>7.86302e-05</ixx>
+          <ixy>1.55276e-09</ixy>
+          <ixz>-7.08139e-10</ixz>
+          <iyy>0.000137459</iyy>
+          <iyz>-6.77565e-10</iyz>
+          <izz>7.84461e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name="front_right_wheel_link_collision">
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file:///home/kamel/ros2_ws3_1/src/mobile_arm_robot_description/meshes/front_right_wheel_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="front_right_wheel_link_visual">
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file:///home/kamel/ros2_ws3_1/src/mobile_arm_robot_description/meshes/front_right_wheel_link.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.231 0.231 0.231 1</ambient>
+          <diffuse>0.231 0.231 0.231 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+    </link>
+    <joint name="rear_left_wheel_joint" type="revolute">
+      <pose relative_to="base_link">-0.07999 0.15998 -0.1061 0 -0 0</pose>
+      <parent>base_link</parent>
+      <child>rear_left_wheel_link</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name="rear_left_wheel_link">
+      <pose relative_to="rear_left_wheel_joint">0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 -0.007684 -6.1e-05 0 -0 0</pose>
+        <mass>0.0711334</mass>
+        <inertia>
+          <ixx>7.86302e-05</ixx>
+          <ixy>1.55315e-09</ixy>
+          <ixz>7.09428e-10</ixz>
+          <iyy>0.000137459</iyy>
+          <iyz>6.83448e-10</iyz>
+          <izz>7.84461e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name="rear_left_wheel_link_collision">
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file:///home/kamel/ros2_ws3_1/src/mobile_arm_robot_description/meshes/rear_left_wheel_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="rear_left_wheel_link_visual">
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file:///home/kamel/ros2_ws3_1/src/mobile_arm_robot_description/meshes/rear_left_wheel_link.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.231 0.231 0.231 1</ambient>
+          <diffuse>0.231 0.231 0.231 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+    </link>
+    <joint name="rear_right_wheel_joint" type="revolute">
+      <pose relative_to="base_link">-0.07999 -0.15822 -0.1041 0 -0 0</pose>
+      <parent>base_link</parent>
+      <child>rear_right_wheel_link</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name="rear_right_wheel_link">
+      <pose relative_to="rear_right_wheel_joint">0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-0 0.007684 -6.1e-05 0 -0 0</pose>
+        <mass>0.0711334</mass>
+        <inertia>
+          <ixx>7.86302e-05</ixx>
+          <ixy>1.5495e-09</ixy>
+          <ixz>-7.24961e-10</ixz>
+          <iyy>0.000137459</iyy>
+          <iyz>-6.78976e-10</iyz>
+          <izz>7.84462e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name="rear_right_wheel_link_collision">
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file:///home/kamel/ros2_ws3_1/src/mobile_arm_robot_description/meshes/rear_right_wheel_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="rear_right_wheel_link_visual">
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file:///home/kamel/ros2_ws3_1/src/mobile_arm_robot_description/meshes/rear_right_wheel_link.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.231 0.231 0.231 1</ambient>
+          <diffuse>0.231 0.231 0.231 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+    </link>
+    <static>0</static>
+    <plugin name="ign_ros2_control::IgnitionROS2ControlPlugin" filename="libign_ros2_control-system.so">
+      <robot_param>robot_description</robot_param>
+      <robot_param_node>robot_state_publisher</robot_param_node>
+      <parameters>/home/kamel/ros2_ws3_1/src/mobile_arm_robot_control/config/controllers.yaml</parameters>
+    </plugin>
+  </model>
+</sdf>

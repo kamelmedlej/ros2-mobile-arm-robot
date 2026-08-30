@@ -1,0 +1,40 @@
+cd ~/ros2_ws3_1
+cat >> .gitignore << 'EOF'
+
+# ROS 2 generated folders
+build/
+install/
+log/
+
+# Python generated files
+__pycache__/
+*.pyc
+*.pyo
+
+# Temporary / editor files
+*.swp
+*~
+.DS_Store
+
+# Logs and diagnostics
+*.log
+
+# Backup files
+*.backup*
+*.bak
+*backup_before*
+*BACKUP*
+
+# Temporary files
+*.tmp
+EOF
+
+# Old experiment records
+records/
+
+# Old unused map
+maps/1.yaml
+maps/1.pgm
+
+# Backup files
+*.bak*

@@ -1,0 +1,457 @@
+<robot name="mobile_arm_robot">
+  <link name="base_link">
+    <inertial>
+      <origin xyz="-0.00346272239026099 -0.000623251930132351 -0.0465996448550183" rpy="0 0 3.141592653589793" />
+      <mass value="1.80391316470021" />
+      <inertia ixx="0.00440014038985328" ixy="5.99117352618996E-06" ixz="1.41454502191468E-19" iyy="0.00408900109576873" iyz="5.57632229424048E-19" izz="0.0075706571645213" />
+    </inertial>
+    <visual>
+      <origin xyz="-0 -0 0" rpy="0 0 3.141592653589793" />
+      <geometry>
+        <mesh filename="file:///home/kamel/ros2_ws3_1/src/mobile_arm_robot_description/meshes/base_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.6 0.6 0.6 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0 -0 0" rpy="0 0 3.141592653589793" />
+      <geometry>
+        <mesh filename="file:///home/kamel/ros2_ws3_1/src/mobile_arm_robot_description/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="rear_right_wheel_link">
+    <inertial>
+      <origin xyz="-4.44385678477488E-07 0.00768401029286383 -6.06663930876605E-05" rpy="0 0 0" />
+      <mass value="0.0711333913730136" />
+      <inertia ixx="7.86302257754291E-05" ixy="1.54950410415796E-09" ixz="-7.24961410527428E-10" iyy="0.000137458787468017" iyz="-6.78975663776968E-10" izz="7.84461606299112E-05" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file:///home/kamel/ros2_ws3_1/src/mobile_arm_robot_description/meshes/rear_right_wheel_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.231 0.231 0.231 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file:///home/kamel/ros2_ws3_1/src/mobile_arm_robot_description/meshes/rear_right_wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="rear_right_wheel_joint" type="continuous">
+    <origin xyz="0.07998955100144491 0.158220099441903 -0.104099999999998" rpy="0 0 3.141592653589793" />
+    <parent link="base_link" />
+    <child link="rear_right_wheel_link" />
+    <axis xyz="0 -1 0" />
+  </joint>
+  <link name="front_right_wheel_link">
+    <inertial>
+      <origin xyz="-4.46169832635235E-07 0.00768400803972766 -6.06662545437064E-05" rpy="0 0 0" />
+      <mass value="0.0711333901914001" />
+      <inertia ixx="7.86301650052177E-05" ixy="1.55275788385008E-09" ixz="-7.08138598534008E-10" iyy="0.000137458823618559" iyz="-6.77565147996471E-10" izz="7.84460727691053E-05" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file:///home/kamel/ros2_ws3_1/src/mobile_arm_robot_description/meshes/front_right_wheel_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.231 0.231 0.231 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file:///home/kamel/ros2_ws3_1/src/mobile_arm_robot_description/meshes/front_right_wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="front_right_wheel_joint" type="continuous">
+    <origin xyz="-0.08671416093740709 0.158220099441902 -0.106099999999998" rpy="0 0 3.141592653589793" />
+    <parent link="base_link" />
+    <child link="front_right_wheel_link" />
+    <axis xyz="0 -1 0" />
+  </joint>
+  <link name="front_left_wheel_link">
+    <inertial>
+      <origin xyz="4.45812128074818E-07 -0.007684008343879 -6.06663561565357E-05" rpy="0 0 0" />
+      <mass value="0.0711333869914245" />
+      <inertia ixx="7.86302178358606E-05" ixy="1.55294799784185E-09" ixz="7.11242199404249E-10" iyy="0.000137458818664094" iyz="6.83774030050134E-10" izz="7.84461273758301E-05" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file:///home/kamel/ros2_ws3_1/src/mobile_arm_robot_description/meshes/front_left_wheel_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.231 0.231 0.231 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file:///home/kamel/ros2_ws3_1/src/mobile_arm_robot_description/meshes/front_left_wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="front_left_wheel_joint" type="continuous">
+    <origin xyz="-0.08671416093741489 -0.159979900558096 -0.104099999999999" rpy="0 0 3.141592653589793" />
+    <parent link="base_link" />
+    <child link="front_left_wheel_link" />
+    <axis xyz="0 -1 0" />
+  </joint>
+  <link name="rear_left_wheel_link">
+    <inertial>
+      <origin xyz="4.45419792938218E-07 -0.00768400924280971 -6.06686314203464E-05" rpy="0 0 0" />
+      <mass value="0.0711333857605617" />
+      <inertia ixx="7.86302033732986E-05" ixy="1.55315095035601E-09" ixz="7.09427539092408E-10" iyy="0.000137458822157141" iyz="6.83448121062748E-10" izz="7.84461126800554E-05" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file:///home/kamel/ros2_ws3_1/src/mobile_arm_robot_description/meshes/rear_left_wheel_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.231 0.231 0.231 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file:///home/kamel/ros2_ws3_1/src/mobile_arm_robot_description/meshes/rear_left_wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="rear_left_wheel_joint" type="continuous">
+    <origin xyz="0.0799895510014411 -0.159979900558096 -0.106099999999999" rpy="0 0 3.141592653589793" />
+    <parent link="base_link" />
+    <child link="rear_left_wheel_link" />
+    <axis xyz="0 -1 0" />
+  </joint>
+  <link name="lidar_link">
+    <inertial>
+      <origin xyz="-5.29244803221252E-06 9.11986732532455E-06 -0.0220473705688433" rpy="0 0 0" />
+      <mass value="0.0732236402007256" />
+      <inertia ixx="2.08868776693672E-05" ixy="-4.38440230324523E-09" ixz="-6.56969165240785E-09" iyy="2.08908808229494E-05" iyz="1.13207944363782E-08" izz="2.29270768169295E-05" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file:///home/kamel/ros2_ws3_1/src/mobile_arm_robot_description/meshes/lidar_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.231 0.231 0.231 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file:///home/kamel/ros2_ws3_1/src/mobile_arm_robot_description/meshes/lidar_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="lidar_joint" type="fixed">
+    <origin xyz="0.0908615203408174 -0.00179684818200293 0.04" rpy="0 0 3.141592653589793" />
+    <parent link="base_link" />
+    <child link="lidar_link" />
+    <axis xyz="0 0 0" />
+  </joint>
+  <link name="robot_camera_link">
+    <inertial>
+      <origin xyz="0.00472689816509891 6.48813161475137E-05 -8.69192460145607E-07" rpy="0 0 0" />
+      <mass value="0.00664258946450686" />
+      <inertia ixx="1.29119737700084E-06" ixy="-1.4106412556089E-09" ixz="1.88978710068548E-11" iyy="1.91515193877644E-07" iyz="1.36704302280924E-08" izz="1.21176831848954E-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file:///home/kamel/ros2_ws3_1/src/mobile_arm_robot_description/meshes/robot_camera_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.231 0.231 0.231 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file:///home/kamel/ros2_ws3_1/src/mobile_arm_robot_description/meshes/robot_camera_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="robot_camera_joint" type="fixed">
+    <origin xyz="0.133237695032014 -0.00183257540465381 -0.0160127626540696" rpy="0 0 3.141592653589793" />
+    <parent link="base_link" />
+    <child link="robot_camera_link" />
+    <axis xyz="0 0 0" />
+  </joint>
+  <link name="arm_base_link">
+    <inertial>
+      <origin xyz="0 0 0.0403498779623327" rpy="0 0 0" />
+      <mass value="0.142388000330515" />
+      <inertia ixx="9.83345891516237E-05" ixy="-6.96029251661618E-21" ixz="-1.01763910484271E-21" iyy="0.000101365342787414" iyz="-1.48551349217465E-20" izz="5.02640958638419E-05" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file:///home/kamel/ros2_ws3_1/src/mobile_arm_robot_description/meshes/arm_base_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.502 0.502 0.502 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file:///home/kamel/ros2_ws3_1/src/mobile_arm_robot_description/meshes/arm_base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="arm_base_joint" type="fixed">
+    <origin xyz="-0.0507123049679875 -0.0147075709317677 0.001999999999999" rpy="0 0 6.283185307179583" />
+    <parent link="base_link" />
+    <child link="arm_base_link" />
+    <axis xyz="0 0 0" />
+  </joint>
+  <link name="arm_link_1">
+    <inertial>
+      <origin xyz="-2.77555756156289E-17 0.0113073455356378 0.0303143611088295" rpy="0 0 0" />
+      <mass value="0.163710086835562" />
+      <inertia ixx="0.000104459286205703" ixy="8.78167577896543E-21" ixz="-8.2100588179326E-21" iyy="6.02714441850271E-05" iyz="2.38572566237732E-12" izz="0.000125597627748453" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file:///home/kamel/ros2_ws3_1/src/mobile_arm_robot_description/meshes/arm_link_1.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.502 0.502 0.502 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file:///home/kamel/ros2_ws3_1/src/mobile_arm_robot_description/meshes/arm_link_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="arm_joint_1" type="fixed">
+    <origin xyz="0 0 0.089" rpy="0 0 0" />
+    <parent link="arm_base_link" />
+    <child link="arm_link_1" />
+    <axis xyz="0 0 -1" />
+  </joint>
+  <link name="arm_link_2">
+    <inertial>
+      <origin xyz="-0.000119875100069416 -0.0176670918313967 0.0398213655713242" rpy="0 0 0" />
+      <mass value="0.0971483686204906" />
+      <inertia ixx="8.55706911788115E-05" ixy="6.78147511593631E-13" ixz="1.07278871725056E-11" iyy="9.05147926632669E-05" iyz="-1.11224929969101E-12" izz="1.0467007345738E-05" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file:///home/kamel/ros2_ws3_1/src/mobile_arm_robot_description/meshes/arm_link_2.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.502 0.502 0.502 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file:///home/kamel/ros2_ws3_1/src/mobile_arm_robot_description/meshes/arm_link_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="arm_joint_2" type="fixed">
+    <origin xyz="0 -0.03575 0.0361926165743719" rpy="0 0 0" />
+    <parent link="arm_link_1" />
+    <child link="arm_link_2" />
+    <axis xyz="0 1 0" />
+  </joint>
+  <link name="arm_link_3">
+    <inertial>
+      <origin xyz="-5.38337628511187E-06 0.0417509774529868 0.0392169411487244" rpy="0 0 0" />
+      <mass value="0.306098087166077" />
+      <inertia ixx="0.000202793875357326" ixy="4.87276961819749E-22" ixz="1.07305427495171E-21" iyy="0.000161636786972441" iyz="2.3857256593756E-12" izz="0.000175861723612295" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file:///home/kamel/ros2_ws3_1/src/mobile_arm_robot_description/meshes/arm_link_3.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.502 0.502 0.502 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file:///home/kamel/ros2_ws3_1/src/mobile_arm_robot_description/meshes/arm_link_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="arm_joint_3" type="fixed">
+    <origin xyz="0 0 0.0793246507764895" rpy="0 0 0" />
+    <parent link="arm_link_2" />
+    <child link="arm_link_3" />
+    <axis xyz="0 -1 0" />
+  </joint>
+  <link name="arm_link_4">
+    <inertial>
+      <origin xyz="-0.00552116161147143 -0.00688370159410481 0.0280935233932328" rpy="0 0 0" />
+      <mass value="0.0465359097112086" />
+      <inertia ixx="2.30902356970648E-05" ixy="-3.08622332799642E-08" ixz="2.69353343819293E-08" iyy="1.01462162367979E-05" iyz="1.54700549512797E-07" izz="2.15548237232451E-05" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file:///home/kamel/ros2_ws3_1/src/mobile_arm_robot_description/meshes/arm_link_4.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.502 0.502 0.502 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file:///home/kamel/ros2_ws3_1/src/mobile_arm_robot_description/meshes/arm_link_4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="arm_joint_4" type="fixed">
+    <origin xyz="0 0.0356499999999999 0.126199367116383" rpy="0 0 0" />
+    <parent link="arm_link_3" />
+    <child link="arm_link_4" />
+    <axis xyz="0 0 -1" />
+  </joint>
+  <link name="right_gripper_link">
+    <inertial>
+      <origin xyz="0.00103537730299258 0.00917489495856216 -0.0169788786507543" rpy="0 0 0" />
+      <mass value="0.0111832823198015" />
+      <inertia ixx="3.09236440309124E-06" ixy="-9.55382253273423E-09" ixz="3.04146646384035E-07" iyy="3.35155617426936E-06" iyz="3.49190632658311E-07" izz="1.20389320849747E-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file:///home/kamel/ros2_ws3_1/src/mobile_arm_robot_description/meshes/right_gripper_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.502 0.502 0.502 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file:///home/kamel/ros2_ws3_1/src/mobile_arm_robot_description/meshes/right_gripper_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_gripper_joint" type="fixed">
+    <origin xyz="-0.0005 0.025 0.075" rpy="0 0 0" />
+    <parent link="arm_link_4" />
+    <child link="right_gripper_link" />
+    <axis xyz="0 1 0" />
+    <limit lower="-0.2" upper="0.2" effort="1" velocity="1" />
+  </joint>
+  <link name="left_gripper_link">
+    <inertial>
+      <origin xyz="-0.00103537730299258 -0.00917489495856222 -0.0169788786507544" rpy="0 0 0" />
+      <mass value="0.0111832823198015" />
+      <inertia ixx="3.09236440309125E-06" ixy="-9.5538225327341E-09" ixz="-3.04146646384038E-07" iyy="3.35155617426937E-06" iyz="-3.49190632658309E-07" izz="1.20389320849746E-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file:///home/kamel/ros2_ws3_1/src/mobile_arm_robot_description/meshes/left_gripper_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.502 0.502 0.502 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file:///home/kamel/ros2_ws3_1/src/mobile_arm_robot_description/meshes/left_gripper_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_gripper_joint" type="fixed">
+    <origin xyz="-0.0005 -0.025 0.075" rpy="0 0 0" />
+    <parent link="arm_link_4" />
+    <child link="left_gripper_link" />
+    <axis xyz="0 -1 0" />
+    <limit lower="-0.2" upper="0.2" effort="1" velocity="1" />
+  </joint>
+  <link name="arm_camera_link">
+    <inertial>
+      <origin xyz="-0.0152175956799578 2.77555756156289E-17 -0.0283336828842755" rpy="0 0 0" />
+      <mass value="0.00633398216150067" />
+      <inertia ixx="3.51972778493213E-07" ixy="-7.87989552738434E-22" ixz="1.11698355402848E-22" iyy="1.05655628485333E-06" iyz="1.30045062639081E-22" izz="1.03014295812325E-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file:///home/kamel/ros2_ws3_1/src/mobile_arm_robot_description/meshes/arm_camera_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.231 0.231 0.231 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file:///home/kamel/ros2_ws3_1/src/mobile_arm_robot_description/meshes/arm_camera_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="arm_camera_joint" type="fixed">
+    <origin xyz="-0.0464999999999993 0 0.042500000000001" rpy="0 0 3.14159265358979" />
+    <parent link="arm_link_4" />
+    <child link="arm_camera_link" />
+    <axis xyz="0 0 0" />
+  </joint>
+  
+    <ros2_control name="GazeboSimSystem" type="system">
+    <hardware>
+      <plugin>ign_ros2_control/IgnitionSystem</plugin>
+    </hardware>
+
+    <joint name="front_left_wheel_joint">
+      <command_interface name="velocity" />
+      <state_interface name="position" />
+      <state_interface name="velocity" />
+    </joint>
+
+    <joint name="rear_left_wheel_joint">
+      <command_interface name="velocity" />
+      <state_interface name="position" />
+      <state_interface name="velocity" />
+    </joint>
+
+    <joint name="front_right_wheel_joint">
+      <command_interface name="velocity" />
+      <state_interface name="position" />
+      <state_interface name="velocity" />
+    </joint>
+
+    <joint name="rear_right_wheel_joint">
+      <command_interface name="velocity" />
+      <state_interface name="position" />
+      <state_interface name="velocity" />
+    </joint>
+  </ros2_control>
+
+  <gazebo>
+    <plugin filename="libign_ros2_control-system.so" name="ign_ros2_control::IgnitionROS2ControlPlugin">
+            <robot_param>robot_description</robot_param>
+      <robot_param_node>robot_state_publisher</robot_param_node>
+<parameters>/home/kamel/ros2_ws3_1/src/mobile_arm_robot_control/config/controllers.yaml</parameters>
+    </plugin>
+  </gazebo>
+  
+</robot>
